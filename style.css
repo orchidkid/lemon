@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  width:100%;
+  background-color: #eaeaea;
+}
+
+.container{
+  width:1440px;
+  margin:0 auto;
+}
+
+.content {
+  width:1120px;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.header{
+  display:flex;
+  justify-content:center;
+  margin-top: 250px;
+  max-width:100%;
+}
+
+.nav {
+  margin-top:120px;
+  background-color:#f8f8f8;
+  box-shadow: 0px 0px 13px 0px rgba(11, 12, 12, 0.15);
+
+}
+
+  .navcontainer {
+    display:flex;
+    align-items:center;
+    padding:44px 94px 44px 94px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  .navleft {
+    width:20%;
+  }
+  .navlogo {
+    background:url(files/Navbar\ logo.png) no-repeat;
+    height:36px;
+  }
+  .navcenter {
+    width:80%;
+  }
+
+  .navmenu ul {
+    display:flex;
+  }
+
+  .navmenu li{
+    list-style: none;
+    margin-left:15px;
+  }
+
+  .navright {
+    width:20%;
+  }
+  
+  .navsearch {
+    padding-left:50px;
+  }
+
+  .searchbar {
+    width:170px;
+    display:flex;
+    align-items:center;
+    height:28px;
+    border:1px solid grey;
+  }
+
+  .searchbar input#search{
+    border:0px;
+    outline:none;
+    background:transparent;
+    margin-left:10px;
+    text-transform: uppercase;
+    overflow:hidden;
+  }
+
+  .searchbar input#search::placeholder{
+    font-size:15px;
+    color:black;
+  }
+
+  input::-webkit-input-placeholder {
+    color: #000000;
+  }
+  input:-moz-placeholder {
+    color: #000000; 
+    background: #E0EFCA;
+  }
+  input:-ms-input-placeholder {
+    color: #000000; 
+    background: #E0EFCA;
+  }
+
+  .fas {
+    margin-left:10px;
+  }
+  .fa-search {
+    color:grey;
+  }
+
+  .searchbar input#search::-webkit-search-decoration,
+  .searchbar input#search::-webkit-search-cancel-button,
+  .searchbar input#search::-webkit-search-results-button,
+  .searchbar input#search::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  .recipe_block_1 {
+    margin-top:85px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  .recipe1_background {
+    background-image:url(files/ContentBackground.png);
+    background-size:cover;
+    max-width:100%;
+    height:440px;
+  }
+  .recipe1_content {
+    padding-top:44px;
+    padding-left:90px;
+  }
+  .recipe1_logo {
+  }
+  .recipe_info {
+    width:356px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .recipe_info h3{
+    font-size:24px;
+    font-family: 'Playfair Display', serif;
+    color: #921026;
+  }
+
+  .cards_block {
+    display:flex;
+    justify-content:space-around;
+    margin-top:85px;
+    padding-top:40px;
+    background-color:#f8f8f8;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.15);
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .leftcard {
+    width:30%;
+  }
+  .centercard {
+    width:30%;
+  }
+  .rightcard {
+    width:30%;
+  }
+
